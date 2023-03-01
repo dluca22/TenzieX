@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Dice from './Dice';
 import './style.css';
-// import Confetti from "react-confetti"
+import Confetti from "react-confetti"
 
 export default function App() {
   // creato un object che definisce un nuovo dado  cui passiamo solo id e poi il resto viene creato qua
@@ -118,9 +118,9 @@ export default function App() {
   }
 
   // added confetti as a new prop, is a self sustained component, just rendered on game completed==true
-  // {gameCompleted && <Confetti />}
   return (
     <main>
+     {gameCompleted && <Confetti />}
       <h1 className='title'>Tenzies</h1>
       <p className='rules'>
         Roll until all dice are the same. Click each die to freeze it at its
