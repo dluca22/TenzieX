@@ -90,8 +90,8 @@ export default function App() {
         if (counter != 0 && score > counter) {
           setScore(counter);
         }
-        localStorage.setItem('score', score);
       }
+      localStorage.setItem('score', score);
     },
     [gameCompleted]
   );
